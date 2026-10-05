@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiekie Leer Kosmaak</title>
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* BODY */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: rgba(26, 26, 26, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        /* NAVIGATION */
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO */
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #d34115;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION LINKS */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #430146;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("WhatsApp Image 2026-10-05 at 02.57.57 (1).jpeg");
+            background-size: cover;
+            background-position: center;
+
+            filter: brightness(0.4);
+
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            margin-bottom: 2rem;
+        }
+
+        /* STORY SECTION */
+        .story {
+            padding: 8rem 2rem;
+            background-color: #08390e;
+        }
+
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #d34115;
+        }
+
+        .story p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #f0f0f0;
+            line-height: 1.8;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            padding: 8rem 2rem;
+            background-color: #ffffff;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background-color: #472016;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: #428f9d;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: #f0f0f0;
+            font-size: 1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #30652e;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #330136;
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i>
+                Kiekie Leer Kosmaak
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#story">Our Mission</a>
+                <a href="#about">About</a>
+                <a href="#lineup">Location</a>
+                <a href="#tickets">Course</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+              From kitchen to career    
+            </h1>
+            <p>
+                By completing our course you will acquire the neccessary skills to start your own business.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section class="story" id="story">
+
+        <div class="story-container">
+
+            <h2 class="section-title">
+                Our Mission
+            </h2>
+
+            <p>
+                We are an organisation aimed at empowering the next generation... Through restaurants! Leave your worries about unemployment behind and take this step to solidify your future. We provide a course where you will learn to function in a high-stakes emvironment and build leadership skills, while receiving a salary.
+            </p>
+
+            <p>
+               Enroll now to reach your full potential, not only as a chef an waiter, but also as an entrepreneur!
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+    <section class="features" id="features">
+
+        <div class="features-container">
+
+            <h2 class="section-title">
+                More information at:
+            </h2>
+
+            <div class="cards">
+
+                <!-- COURSES -->
+                <div class="card">
+
+                    <i class="fas fa-chalkboard-user"></i>
+
+                    <h3>
+                        Classes
+                    </h3>
+
+                    <p>
+                        More information on what the course entails.
+                    </p>
+
+                </div>
+
+
+                <!-- LINEUP -->
+                <div class="card">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <h3>
+                        Locations
+                    </h3>
+
+                    <p>
+                        See where all our restaurants are located.
+                    </p>
+
+                </div>
+
+
+                <!-- COMMUNITY -->
+                <div class="card">
+
+                    <i class="fas fa-users"></i>
+
+                    <h3>
+                        Community
+                    </h3>
+
+                    <p>
+                        Get to know our instructors and alumni.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="social-links">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Kiekie Leer Kosmaak. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
